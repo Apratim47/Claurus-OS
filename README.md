@@ -65,6 +65,6 @@ The project is still in its early stages, so contributions are not open yet. The
 
 ## Author
 
-Apratim Das Gupta
+Apratim Dasgupta
 
 Learning in public and building one step at a time.
