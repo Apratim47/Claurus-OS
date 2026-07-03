@@ -1,4 +1,3 @@
-# CS50x Week 1
 
 # CS50x Week 1
 
