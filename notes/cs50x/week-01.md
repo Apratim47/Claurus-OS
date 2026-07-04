@@ -1,129 +1,85 @@
 
-# CS50x Week 1
+# CS50x Week 1 - C
 
 ## Status
 
-🚧 In Progress
+✅ Completed
 
 ---
 
-# Linux Commands
+# Overview
+
+This week introduced the C programming language and how programs are compiled and executed. Although C requires more work than Scratch, it provides much greater control over how programs interact with the computer.
+
+---
+
+# Linux Terminal Commands
 
 | Command | Purpose |
 |----------|---------|
 | `ls` | List files and directories |
-| `mkdir` | Create a new directory |
-| `rm` | Remove a file |
+| `pwd` | Show the current working directory |
+| `cd` | Change directory |
+| `mkdir` | Create a directory |
+| `cp` | Copy files or directories |
 | `mv` | Move or rename files/directories |
-| `cp` | Copy files/directories |
-| `cd` | Change the current directory |
-| `pwd` | Display the current working directory |
+| `rm` | Remove files |
+| `code file.c` | Open a file in VS Code |
 
 ---
 
-# Writing a C Program
+# Basic Structure of a C Program
 
 ```c
 #include <stdio.h>
 
 int main(void)
 {
-    printf("hello, world\n");
+    printf("Hello, world!\n");
 }
 ```
 
-## Learned
+## Explanation
 
-- `#include <stdio.h>` includes the Standard Input/Output library.
-- `main()` is the entry point of every C program.
-- Curly braces `{}` define the function body.
-- Every statement ends with a semicolon `;`.
-- `printf()` is used to display output.
+### `#include <stdio.h>`
 
----
+Imports the Standard Input/Output library.
 
-# Compilation & Execution
-
-```bash
-code hello.c
-make hello
-./hello
-```
-
-## Learned
-
-- `code hello.c` → Opens the file in Visual Studio Code.
-- `make hello` → Compiles `hello.c` into an executable named `hello`.
-- `./hello` → Runs the compiled program.
+Without it, functions like `printf()` cannot be used.
 
 ---
 
-# Data Types
+### `int main(void)`
 
-- `int` → Integer
-- `float` → Floating-point number
-- `double` → Double-precision floating-point number
-- `char` → Single character
-- `bool` → Boolean value (true/false)
-- `string` → Sequence of characters (provided by the CS50 Library)
+Every C program starts execution here.
 
----
-
-# Operators
-
-## Arithmetic Operators
-
-- `+` Addition
-- `-` Subtraction
-- `*` Multiplication
-- `/` Division
-- `%` Modulus (Remainder)
-
-## Comparison Operators
-
-- `==` Equal to
-- `!=` Not equal to
-- `<` Less than
-- `>` Greater than
-- `<=` Less than or equal to
-- `>=` Greater than or equal to
-
-## Logical Operators
-
-- `&&` Logical AND
-- `||` Logical OR
-- `!` Logical NOT
+- `int` → The function returns an integer.
+- `main` → The entry point of the program.
+- `void` → No arguments are passed into the program.
 
 ---
 
-# Conditions
+### Curly Braces `{ }`
 
-Conditional statements allow a program to make decisions.
+Everything inside these braces belongs to the function.
 
-- `if`
-- `else`
-- `else if`
+---
+
+### Semicolon `;`
+
+Almost every statement in C ends with a semicolon.
+
+---
+
+# printf()
+
+Used to display output on the screen.
 
 Example:
 
 ```c
-if (x > 0)
-{
-    printf("Positive\n");
-}
+printf("Hello!\n");
 ```
-
----
-
-# Format Specifiers
-
-| Specifier | Meaning |
-|------------|---------|
-| `%i` | Integer |
-| `%d` | Integer |
-| `%f` | Floating-point number |
-| `%c` | Character |
-| `%s` | String |
 
 ---
 
@@ -137,19 +93,25 @@ if (x > 0)
 
 ---
 
-# Important Concepts
+# Compilation
 
-- Source Code
-- Compiler
-- Executable
-- Function
-- Library
-- Header File
-- Terminal
+Source code cannot run directly.
+
+Process:
+
+```
+hello.c
+      ↓
+Compiler
+      ↓
+Machine Code
+      ↓
+Executable Program
+```
 
 ---
 
-# Commands Learned
+# Commands Used
 
 ```bash
 code hello.c
@@ -157,28 +119,412 @@ make hello
 ./hello
 ```
 
+### Meaning
+
+`code hello.c`
+
+Open the file in VS Code.
+
 ---
 
-# My Takeaways
+`make hello`
 
-- Learned the basic structure of a C program.
-- Understood how to compile and run C programs.
-- Learned essential Linux terminal commands.
-- Learned basic data types, operators, and conditions.
-- Learned how format specifiers and escape characters work.
+Compile `hello.c`.
+
+Equivalent to using a compiler manually, but easier.
+
+---
+
+`./hello`
+
+Run the compiled program.
+
+---
+
+# Data Types
+
+## int
+
+Stores integers.
+
+Example:
+
+```c
+int age = 18;
+```
+
+---
+
+## float
+
+Stores decimal numbers.
+
+Example:
+
+```c
+float pi = 3.14;
+```
+
+---
+
+## double
+
+Stores decimal numbers with higher precision than float.
+
+---
+
+## char
+
+Stores one character.
+
+Example:
+
+```c
+char grade = 'A';
+```
+
+---
+
+## bool
+
+Stores either:
+
+- true
+- false
+
+---
+
+## string (CS50 Library)
+
+Stores text.
+
+Example:
+
+```c
+string name = "Apratim";
+```
+
+Internally, a string is a sequence of characters.
+
+---
+
+# Variables
+
+Variables store information.
+
+Example:
+
+```c
+int score = 100;
+```
+
+Think of a variable as a labeled box that stores data.
+
+---
+
+# Operators
+
+## Arithmetic
+
+| Operator | Meaning |
+|----------|---------|
+| + | Addition |
+| - | Subtraction |
+| * | Multiplication |
+| / | Division |
+| % | Remainder |
+
+---
+
+## Comparison
+
+| Operator | Meaning |
+|----------|---------|
+| == | Equal |
+| != | Not Equal |
+| < | Less Than |
+| > | Greater Than |
+| <= | Less Than or Equal |
+| >= | Greater Than or Equal |
+
+---
+
+## Logical
+
+| Operator | Meaning |
+|----------|---------|
+| && | AND |
+| \|\| | OR |
+| ! | NOT |
+
+---
+
+# Conditions
+
+Used to make decisions.
+
+Example:
+
+```c
+if (score >= 50)
+{
+    printf("Pass\n");
+}
+else
+{
+    printf("Fail\n");
+}
+```
+
+---
+
+# Format Specifiers
+
+Used with `printf()`.
+
+| Specifier | Meaning |
+|-----------|---------|
+| `%i` | Integer |
+| `%d` | Integer |
+| `%f` | Float |
+| `%c` | Character |
+| `%s` | String |
+
+Example:
+
+```c
+printf("%i\n", age);
+```
+
+---
+
+# User Input
+
+CS50 provides helper functions.
+
+Example:
+
+```c
+int age = get_int("Age: ");
+```
+
+Other functions include:
+
+- `get_char()`
+- `get_float()`
+- `get_double()`
+- `get_string()`
+
+---
+
+# Functions
+
+A function performs a specific task.
+
+Example:
+
+```c
+printf("Hello");
+```
+
+`printf()` is a function.
+
+---
+
+## Why Functions?
+
+Instead of repeating code:
+
+```c
+printf("#\n");
+printf("#\n");
+printf("#\n");
+```
+
+Create one function and call it multiple times.
+
+Functions make programs:
+
+- Cleaner
+- Easier to maintain
+- Easier to reuse
+
+---
+
+# Function Prototype
+
+Sometimes you call a function before defining it.
+
+Example:
+
+```c
+void meow(void);
+
+int main(void)
+{
+    meow();
+}
+
+void meow(void)
+{
+    printf("Meow\n");
+}
+```
+
+The line
+
+```c
+void meow(void);
+```
+
+is called a **function prototype**.
+
+It tells the compiler:
+
+> "This function exists. Its full definition will appear later."
+
+Without a prototype, the compiler may produce an error.
+
+---
+
+# Loops
+
+## for Loop
+
+Used when the number of repetitions is known.
+
+Example:
+
+```c
+for (int i = 0; i < 3; i++)
+{
+    printf("Hello\n");
+}
+```
+
+---
+
+## while Loop
+
+Runs while a condition remains true.
+
+Example:
+
+```c
+while (true)
+{
+    printf("Running\n");
+}
+```
+
+---
+
+# Common Programming Workflow
+
+```
+Write Code
+      ↓
+Compile
+      ↓
+Fix Errors
+      ↓
+Run Program
+      ↓
+Improve Code
+```
+
+---
+
+# Important Terms
+
+### Source Code
+
+Human-readable code.
+
+---
+
+### Compiler
+
+Converts source code into machine code.
+
+---
+
+### Machine Code
+
+Instructions understood by the CPU.
+
+---
+
+### Executable
+
+The compiled program that can be run.
+
+---
+
+### Library
+
+A collection of useful functions.
+
+---
+
+### Header File
+
+Declares functions available in a library.
+
+Example:
+
+```c
+#include <stdio.h>
+```
+
+---
+
+# Things I Learned
+
+- How C programs are structured.
+- Why libraries are needed.
+- How compilation works.
+- How to use Linux terminal commands.
+- Variables and data types.
+- Arithmetic, comparison, and logical operators.
+- Conditions and loops.
+- Functions.
+- Function prototypes.
+- Basic program organization.
 
 ---
 
 # Things to Revise
 
-- Difference between `int`, `float`, and `double`
-- More practice with Linux commands
-- More practice with operators and conditions
+- Function prototypes
+- Loops
+- Operators
+- Data types
+- Format specifiers
 
 ---
 
-# Questions
+# Questions for Future Me
 
-- How does the compiler convert C code into machine code?
-- What happens internally when `make` is executed?
-- How does `printf()` work behind the scenes?
+- How does `make` actually compile a program?
+- How does the compiler find header files?
+- How are strings stored in memory?
+- What happens inside `printf()`?
+- How does the CPU execute machine code?
+
+---
+
+# Relation to Claurus OS
+
+Everything learned this week forms the foundation for operating system development.
+
+Understanding C is essential because operating systems rely heavily on:
+
+- Functions
+- Memory
+- Variables
+- Program structure
+- Compilation
+- Interaction with hardware
+
+These concepts will be used repeatedly while building Claurus OS.
