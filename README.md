@@ -1,70 +1,66 @@
 # Claurus OS
 
-Claurus OS is my long-term project to build an operating system from scratch. The aim is to understand how operating systems work at a deep level while gradually creating a modern system with a strong focus on performance, security, and usability.
+> Building the foundations of a next-generation operating system from scratch.
 
-> **Project Status:** Learning & Planning Stage
+## About
 
----
+Claurus OS is my long-term operating system project.
 
-## Why I'm Building Claurus OS
+This repository currently serves as my public learning journal, where I document concepts, notes, experiments, and research while learning the fundamentals required to build an operating system from scratch.
 
-Instead of only studying operating systems from books, I want to learn by creating one. This repository will document my progress, research, experiments, and eventually the development of Claurus OS itself.
+The goal is to deeply understand systems programming rather than simply generating code.
 
----
+## Current Status
 
-## Long-Term Goals
+🚧 Learning & Research Phase
 
-- Build an operating system from scratch
-- Learn kernel development and computer architecture
-- Design a clean and modern system
-- Create a platform that developers enjoy using
-- Grow the project into an open-source community
+Current focus includes:
+- CS50x
+- CS50P
+- C Programming
+- Computer Systems
+- Operating System Fundamentals
+- Git & GitHub
+- Low-Level Programming
 
----
-
-## Current Focus
-
-At the moment, I'm building the knowledge needed before writing the kernel.
-
-Current learning includes:
-- Harvard CS50x
-- Programming fundamentals
-- Operating system concepts
-- Computer architecture
-- Git and GitHub
-
----
-
-## Repository Roadmap
-
-- 📚 Documentation
-- 📝 Research Notes
-- ⚙️ Prototype Development
-- 🧠 Kernel Development
-- 🚀 Public Releases
-
----
+Prototype development will begin after completing the required fundamentals.
 
 ## Repository Structure
 
-docs/      → Documentation
+```
+notes/
+    cs50x/
+    cs50p/
 
-notes/     → Learning notes
+assets/
+```
 
-src/       → Source code
+## Future Development
 
-assets/    → Images and logos
+The core implementation of Claurus OS will be developed in a separate repository.
+
+This repository will continue to contain:
+- Personal learning notes
+- Research
+- Design ideas
+- Development documentation
+
+## Licensing
+
+This repository currently contains personal notes and documentation.
+
+The future Claurus OS source code is planned to be proprietary (closed source). Public availability of documentation does not imply that the operating system or its source code will be open source.
+
+## Disclaimer
+
+These notes are written in my own words for learning and revision.
+
+I do not reproduce copyrighted course materials, lecture transcripts, slides, or assignments. Any code examples are either my own or written from my understanding of the concepts.
+
+Please refer to the official course resources for the complete course material.
 
 ---
 
-## Contributing
+**Author:** Apratim Dasgupta
 
-The project is still in its early stages, so contributions are not open yet. They will be welcomed once the first working prototype is available.
-
----
-
-## Author
-
-Apratim Dasgupta
-
-Learning in public and building one step at a time.
+Building Claurus OS, one concept at a time.
